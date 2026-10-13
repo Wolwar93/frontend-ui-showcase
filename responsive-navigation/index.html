@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Адаптивная навигация — UI-компонент</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержимому</a>
+  <header class="site-header" data-header>
+    <a class="brand" href="#home" aria-label="Студия — главная">СТУДИЯ<span>.</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="sr-only">Открыть меню</span><span></span><span></span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Основная навигация">
+      <a href="#home" class="is-active" aria-current="page">Главная</a>
+      <a href="#about">О нас</a><a href="#work">Проекты</a><a href="#process">Процесс</a><a href="#contact">Контакты</a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="demo-section demo-hero" id="home"><div class="container"><span class="eyebrow">АДАПТИВНАЯ НАВИГАЦИЯ</span><h1>Меню, которое адаптируется.</h1><p>Измените ширину окна, откройте меню, нажмите Escape или кликните вне навигации.</p><a class="demo-link" href="#about">Исследовать пример ↓</a></div></section>
+    <section class="demo-section" id="about"><div class="container"><span class="eyebrow">01 / О НАС</span><h2>О нас</h2><p>Демонстрационный контент для проверки переходов по якорям.</p></div></section>
+    <section class="demo-section alt" id="work"><div class="container"><span class="eyebrow">02 / ПРОЕКТЫ</span><h2>Проекты</h2><p>Навигация автоматически закрывается после выбора раздела.</p></div></section>
+    <section class="demo-section" id="process"><div class="container"><span class="eyebrow">03 / ПРОЦЕСС</span><h2>Процесс</h2><p>При переходе на десктопное разрешение открытое мобильное меню сбрасывается.</p></div></section>
+    <section class="demo-section alt" id="contact"><div class="container"><span class="eyebrow">04 / КОНТАКТЫ</span><h2>Контакты</h2><p>Клавиатура: Tab, Enter, Escape.</p></div></section>
+  </main>
+</body>
+</html>

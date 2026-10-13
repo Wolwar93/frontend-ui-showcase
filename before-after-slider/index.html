@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Демонстрация адаптивного слайдера сравнения изображений «До / После».">
+  <title>Слайдер «До / После» — UI-компонент</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <header class="intro">
+      <span class="eyebrow">04 / UI-КОМПОНЕНТ</span>
+      <h1>До <em>/</em> После</h1>
+      <p>Перемещайте разделитель мышью, пальцем или стрелками клавиатуры, чтобы сравнить два изображения.</p>
+    </header>
+    <section class="demo" aria-labelledby="demo-title">
+      <div class="demo-heading"><h2 id="demo-title">Обновление интерьера</h2><span>ИНТЕРАКТИВНОЕ СРАВНЕНИЕ</span></div>
+      <div class="compare" data-compare style="--position:50%">
+        <img class="compare__image" src="assets/before.svg" alt="Иллюстрация комнаты с потёртым диваном до обновления" width="1200" height="760">
+        <div class="compare__after" aria-hidden="true"><img class="compare__image" src="assets/after.svg" alt="" width="1200" height="760"></div>
+        <span class="compare__divider" aria-hidden="true"></span>
+        <span class="compare__handle" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="m9 7-5 5 5 5m6-10 5 5-5 5"/></svg></span>
+        <span class="compare__label compare__label--before" aria-hidden="true">ДО</span>
+        <span class="compare__label compare__label--after" aria-hidden="true">ПОСЛЕ</span>
+        <label class="sr-only" for="compare-range">Показать обновлённую комнату</label>
+        <input id="compare-range" type="range" min="0" max="100" step="1" value="50" aria-valuetext="Показано 50% изображения после обновления">
+      </div>
+      <div class="demo-foot"><span>← ДО</span><span>ПЕРЕМЕЩАЙТЕ РАЗДЕЛИТЕЛЬ</span><span>ПОСЛЕ →</span></div>
+    </section>
+    <p class="note">Для примера использованы собственные SVG-иллюстрации. Фотографии и материалы заказчика не включены.</p>
+  </main>
+</body>
+</html>
